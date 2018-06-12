@@ -160,7 +160,7 @@ do_install()
     fi
 
     # Package dependencies.
-    rosdep install --from-paths . --skip-keys google-mock --ignore-src --rosdistro ${ROS_DISTRO} -y --as-root pip:no
+    rosdep install --from-paths . --skip-keys google-mock --skip-keys nose --ignore-src --rosdistro ${ROS_DISTRO} -y --as-root pip:no
   popd
 
   # Clean out or create the install directory.
